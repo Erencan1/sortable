@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>tableJS</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #337ab7;">
+
+    <table id="expTable">
+            
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>Player</th>
+                <th>Goals Scored</th>
+                <th>Assists</th>
+                <th>Minutes Played</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Brazil</td>
+                <td>Neymar</td>
+                <td>2</td>
+                <td>1</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <td>England</td>
+                <td>Harry KANE</td>
+                <td>6</td>
+                <td>0</td>
+                <td>273</td>
+            </tr>
+            <tr>
+                <td>Belgium</td>
+                <td>Romelu LUKAKU</td>
+                <td>4</td>
+                <td>1</td>
+                <td>326</td>
+            </tr>
+            <tr>
+                <td>Portugal</td>
+                <td>CRISTIANO RONALDO</td>
+                <td>4</td>
+                <td>0</td>
+                <td>360</td>
+            </tr>
+            <tr>
+                <td>Russia</td>
+                <td>Artem DZYUBA</td>
+                <td>3</td>
+                <td>1</td>
+                <td>254</td>
+            </tr>
+            <tr>
+                <td>France</td>
+                <td>Antoine GRIEZMANN</td>
+                <td>3</td>
+                <td>1</td>
+                <td>390</td>
+            </tr>
+            <tr>
+                <td>Japan</td>
+                <td>Keisuke HONDA</td>
+                <td>1</td>
+                <td>1</td>
+                <td>47</td>
+            </tr>
+            <tr>
+                <td>Uruguay</td>
+                <td>Luis SUAREZ</td>
+                <td>2</td>
+                <td>1</td>
+                <td>450</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>Yerry MINA</td>
+                <td>3</td>
+                <td>0</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>Japan</td>
+                <td>Takashi INUI</td>
+                <td>2</td>
+                <td>1</td>
+                <td>292</td>
+            </tr>
+            <tr>
+                <td>Argentina</td>
+                <td>Sergio AGUERO</td>
+                <td>2</td>
+                <td>0</td>
+                <td>178</td>
+            </tr>
+            <tr>
+                <td>Argentina</td>
+                <td>Lionel MESSI</td>
+                <td>1</td>
+                <td>2</td>
+                <td>360</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<script src="table.js"></script>
+<script>
+
+    var sortingFunction = function (row) {
+        var total = parseInt(row.cells[2].innerHTML) + parseInt(row.cells[3].innerHTML)
+        var minutes = parseInt(row.cells[4].innerHTML)
+        return -total/minutes;
+    };
+
+    stage({
+        'table_id': 'expTable',
+        'row_counter': 6,
+        'sortingFunction': sortingFunction
+    });
+    
+</script>
+</body>
+</html>
