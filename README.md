@@ -1,9 +1,6 @@
 # sortable
-sortable, easily customizable javascript table
-
-
-![alt text](https://github.com/Erencan1/sortable/blob/master/Screenshot.png)
-
+Make HTML table interactive and sortable
+Check out table.js, it is easily customizable
 
 
 ```javascript
